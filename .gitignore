@@ -1,0 +1,24 @@
+# IDE specific files/folders
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+CopilotSnapshots/
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Ll]og/
+[Ll]ogs/
+
+# macOS / Linux folder attributes
+.DS_Store
+Thumbs.db

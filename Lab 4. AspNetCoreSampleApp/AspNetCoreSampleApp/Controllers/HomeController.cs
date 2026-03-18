@@ -8,6 +8,7 @@ namespace AspNetCoreSampleApp.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.CurrentTime = DateTime.Now;
             return View();
         }
 
