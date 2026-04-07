@@ -5,7 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.Add(new ServiceDescriptor(typeof(ILog), new ConsoleLogger()));
+//builder.Services.Add(new ServiceDescriptor(typeof(ILog), new ConsoleLogger()));
+builder.Services.AddSingleton<ILog, ConsoleLogger>();
+
+//add here the calculator interface, prefer it to be scoped so it doesnt get overworked
+builder.Services.AddScoped<ICalculatorService, CalculatorService>();
 
 var app = builder.Build();
 
